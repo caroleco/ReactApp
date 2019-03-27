@@ -5,13 +5,15 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <Image style={styles.reposiveImg}
+          source={require('../assets/logo')}
+        />
         <Text>Usuário</Text>
-        <TextInput></TextInput>
+        <TextInput style={styles.textInput}></TextInput>
         <Text>Senha</Text>
-        <TextInput></TextInput>
-
+        <TextInput style={styles.textInput} password={true} style={styles.default}></TextInput>
         <Button 
-          title="Go To Profile"
+          title="Entrar"
           onPress={
             () => this.props.navigation.navigate( 'Principal' )
           }
@@ -29,4 +31,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textInput: {
+    height: 40,
+    borderColor : 'gray',
+    borderWidth:1,
+  },
+  reposiveImg: {
+    width: 70,
+    height: 50
+  }
 });
