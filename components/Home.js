@@ -5,9 +5,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image style={styles.reposiveImg}
-          source={require('../assets/logo')}
-        />
+     
         <Text>Usuário</Text>
         <TextInput style={styles.textInput}></TextInput>
         <Text>Senha</Text>
@@ -32,7 +30,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textInput: {
-    height: 40,
+    height: 10,
+    width:40,
     borderColor : 'gray',
     borderWidth:1,
   },
